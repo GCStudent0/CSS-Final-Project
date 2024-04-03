@@ -1,0 +1,70 @@
+/* Jason Hunt */
+/* 200567508 */
+/* CSS Final Project */
+/* Apr 4th, 2024 */
+
+html {
+    /*Apply box sizing, base font size, line height, and default font*/
+    /* Apply box sizing */
+	box-sizing: border-box;
+
+    /*Default font*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Default font size*/
+    font-size: 120%;
+
+    /*Default line height*/
+    line-height: 1.4;
+}
+
+/* Apply box sizing */
+*, *:before, *:after {
+    box-sizing: inherit;
+    }
+
+/* Apply base styling to body and set up grid*/
+body{
+    margin: auto 3vw;
+    background-color: green;
+
+    display: grid;
+    gap: 1vw;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main asideProfile"
+    "main asideStyles"
+    "footer footer"
+        
+}
+
+/* CSS for Header */
+header{
+    grid-area: header;
+}
+
+/* CSS for Nav */
+nav{
+    grid-area: nav;
+}
+
+/* CSS for main */
+main{
+    grid-area: main;
+}
+
+/* CSS for aside class = profile */
+.profile{
+    grid-area: asideProfile;
+}
+
+/* CSS for aside id=styles */
+#styles{
+    grid-area: asideStyles;
+}
+
+/* CSS for footer */
+footer{
+    grid-area: footer;
+}
