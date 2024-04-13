@@ -26,45 +26,184 @@ html {
 /* Apply base styling to body and set up grid*/
 body{
     margin: auto 3vw;
-    background-color: green;
+    /* Background color in case image fails. */
+    background-color: pink;
+    
+    /* Wonderful background image found here https://www.vecteezy.com/vector-art/957764-seamless-watermelon-pattern */
+    background-image: url(seamless-watermelon-pattern-vector-754240117.jpg);
+    background-size: 60vw;
 
+    /*********** Control grid areas ***************/
     display: grid;
     gap: 1vw;
     grid-template-areas:
-    "header header"
-    "nav nav"
-    "main asideProfile"
-    "main asideStyles"
-    "footer footer"
-        
+    "header      header"
+    "nav         nav"
+    "main        main"
+    "main        main"
+    "asideProfile asideStyles"
+    "footer      footer";
 }
 
-/* CSS for Header */
+/********* CSS for Header area *************/
 header{
     grid-area: header;
+
+    margin-top: 1vw;
+    padding: 1vw;
+
+    text-align: center;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
+
+    font-size:larger;
+
 }
 
-/* CSS for Nav */
+/************ CSS for Nav area ************/
 nav{
     grid-area: nav;
+
+    margin-top: 1vw;
+    padding: 1vw;
+
+    justify-content: center;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
 
-/* CSS for main */
+/* Put list into flexbox */
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: "\1F349";
+}
+
+
+/* Style links in list. */
+nav a{
+    color: green;
+}
+
+nav a:hover{
+    color: black;
+}
+
+/************ CSS for main area ************/
 main{
     grid-area: main;
+
+    margin-top: 1vw;
+    padding: 1vw;
+
+    text-align: center;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
 
-/* CSS for aside class = profile */
+/* Style list in main */
+
+/* Put list into flexbox */
+main section ul{
+    border: solid black;
+    padding: 1vw;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+
+
+    list-style-type: "\1F349";
+}
+
+main ul li{
+    color: antiquewhite;
+    background-color: green;
+}
+
+
+/* Style links in list. */
+main a{
+    color: green;
+}
+
+main a:hover{
+    color: black;
+}
+
+/************* CSS for aside class = profile area ************/
 .profile{
     grid-area: asideProfile;
+
+    margin-top: 1vw;
+    padding: 1vw;
+
+    text-align: center;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
 
-/* CSS for aside id=styles */
+/************* CSS for aside id=styles area ****************/
 #styles{
     grid-area: asideStyles;
+
+    margin-top: 1vw;
+    padding: 1vw;
+
+    text-align: center;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
 
-/* CSS for footer */
+/*************** CSS for footer area ********************/
 footer{
     grid-area: footer;
+
+    margin-top: 1vw;
+    padding: 1vw;
+
+    text-align: center;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
+
+/*********** CSS to edit star images area ************/
+/* Searched Stephanie Eckles style stage to find where star was in html and how to manipulate it.*/
+svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.25em;
+    fill: black;
+  }
+  
+  /************ References and Referenced Work ****************/
+  /* https://stylestage.dev/styles/css/main-stage.css */
+  /* https://www.vecteezy.com/vector-art/957764-seamless-watermelon-pattern */
+  /* https://www.utf8icons.com/character/127817/watermelon */
+  /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
