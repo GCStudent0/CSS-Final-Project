@@ -44,13 +44,15 @@ body{
     /*********** Control grid areas ***************/
     display: grid;
     gap: 1vw;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "header      header"
-    "nav         nav"
-    "main        main"
-    "main        main"
+    "header       header"
+    "nav          nav"
+    "main         main"
+    "main         main"
     "asideProfile asideStyles"
-    "footer      footer";
+    "footer       footer"
+    "skipLink     skipLink";
 }
 
 /********* CSS for Header area *************/
@@ -87,7 +89,7 @@ header a{
     padding: 0.2vw;
 }
 
-header a:hover{
+header a:hover, header a:active{
     color: black
 }
 
@@ -110,6 +112,7 @@ nav{
 /* Put list into flexbox and style*/
 nav ul{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     list-style-type: "\1F349";
 }
@@ -121,7 +124,7 @@ nav a{
     padding: 0.4vw;
 }
 
-nav a:hover{
+nav a:hover, nav a:active{
     color: black;
 }
 
@@ -190,7 +193,7 @@ main ol li{
     line-height: 2;
 }
 
-main a:hover{
+main a:hover, main a:active{
     color: black;
 }
 
@@ -211,7 +214,7 @@ main a:hover{
 }
 
 .profile h4{
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .profile ul{
@@ -240,7 +243,7 @@ main a:hover{
     color: papayawhip;
 }
 
-.profile a:hover{
+.profile a:hover, main a:active{
     color: black;
 }
 
@@ -270,7 +273,6 @@ main a:hover{
     flex-wrap: wrap;
     gap: 3vw;
 
-
     list-style-type: "\1F349";
 }
 
@@ -286,7 +288,7 @@ main a:hover{
     color: papayawhip;
 }
 
-#styles a:hover{
+#styles a:hover, main a:active{
     color: black;
 }
 
@@ -334,12 +336,14 @@ footer a{
     padding:0.2vw;
 }
 
-footer a:hover{
+footer a:hover, main a:active{
     color: black;
 }
 
 /******* CSS for skip to main content  **********/
 .skip-link{
+    grid-area: skipLink;
+
     color: papayawhip;
     background-color: #f04951e1;
     padding:0.2vw;
@@ -348,13 +352,13 @@ footer a:hover{
     border-width: 5px;
     border-radius: 5vw;
     
-    margin-left: 35vw;
     text-align: center;
 }
 
-.skip-link:hover{
+.skip-link:hover, .skip-link:active{
     color: black;
 }
+
 
 /*********** CSS to edit star images area ************/
 /* Searched Stephanie Eckles style stage to find where star was in html and how to manipulate it.*/
@@ -362,8 +366,50 @@ svg {
   width: 1em;
   height: 1em;
   fill: currentColor;
-  }
-  
+}
+
+/* Media Query to adjust page when below 1060 width */
+/* Adjust grid layout */
+@media screen and (max-width: 720px){
+    
+    body{
+    /* Adjust grid layout */
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "asideProfile"
+    "asideStyles"
+    "footer"
+    "skipLink";
+    }
+    /* Adjust position of skip-link */
+    .skip-link{
+        margin-left: 0vw;
+    }
+
+    /* Adjust gap and wrap in flexboxes */
+    nav ul{
+        gap: 7vw;
+    }
+    .profile ul{
+        gap: 7vw;
+    }
+    #styles ul{
+        gap: 7vw;
+    }
+    footer ul{
+        gap: 7vw;
+    }
+    /* Adjust size of border box inside main */
+    main section ul{
+        list-style-type: none;
+    }
+
+}
   /************ References and Referenced Work ****************/
   /* https://stylestage.dev/styles/css/main-stage.css */
   /* https://www.vecteezy.com/vector-art/957764-seamless-watermelon-pattern */
