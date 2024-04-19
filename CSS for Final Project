@@ -82,18 +82,19 @@ header h1{
 header h2{
     margin-top: -2vw;
 }
-
+/* Style header links */
 header a{
     color: papayawhip;
     background-color: green;
     padding: 0.2vw;
 }
-
+/* Show interactivity to user by changing header link color to black when hover over */
 header a:hover, header a:active{
     color: black
 }
 
 /************ CSS for Nav area ************/
+/* Set nav as grid area nav, adjust positioning and style. */
 nav{
     grid-area: nav;
 
@@ -103,32 +104,39 @@ nav{
     justify-content: center;
 
     background-color: #f04951e1;
+
     border-style:solid;
     border-color: green;
     border-width: 5px;
     border-radius: 5vw;
 }
 
-/* Put list into flexbox and style*/
+/* Put list into flexbox and make list icons UTF-8 watermelon icon */
 nav ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
     list-style-type: "\1F349";
 }
 
-/* Style links in list. */
-nav a{
-    color:papayawhip;
+nav ul li{
     background-color: green;
+}
+/* Style links in list. */
+nav ul a{
+    color:papayawhip;
     padding: 0.4vw;
+    
 }
 
+/* Show interactivity to user by changing header link color to black when hover/active */
 nav a:hover, nav a:active{
     color: black;
 }
 
 /************ CSS for main area ************/
+/* Make main grid area main, adjust positioning, align text and style*/
 main{
     grid-area: main;
 
@@ -144,22 +152,22 @@ main{
     border-radius: 5vw;
 }
 
-/* Adjust position of headers in main */
+/* Adjust bottom margin of h1 and h3 in main */
 main h2,h3{
     margin-bottom: -0.9vw;
 }
-
+/* Adjust top margin of h2*/
 main h2{
     margin-top: -0.1vw;
     
 }
-
+/* Adjust position of #files */
 #files h3{
     margin-top: -0.1vw;
     margin-bottom: 1vw;
 }
-/* Style list in main */
-/* Put list into flexbox */
+
+/* Style list in main and put in flexbox */
 main section ul{
     border: solid green;
     border-radius: 1vw;
@@ -172,32 +180,34 @@ main section ul{
     flex-wrap: wrap;
     gap: 4vw;
 
-
+    /* List icons to UTF-8 watermelon icon */
+    list-style-position: inside;
     list-style-type: "\1F349";
 }
-
+/* Style list elements */
 main ul li{
     color: papayawhip;
     background-color: green;
     padding:0.4vw;
 }
-
+/* Style links in main */
 main a{
     color: papayawhip;
     background-color: green;
     padding:0.2vw;
 }
-
+/* Align list to left and increase line height for readable. */
 main ol li{
     text-align:left;
     line-height: 2;
 }
-
+/* Show interactivity to user by changing header link color to black when hover/active */
 main a:hover, main a:active{
     color: black;
 }
 
 /************* CSS for aside class = profile area ************/
+/* Make .profile aside grid area asideProfile, adjust positioning and add styling */
 .profile{
     grid-area: asideProfile;
 
@@ -214,10 +224,12 @@ main a:hover, main a:active{
 }
 
 .profile h4{
+    /* Make h4 text larger */
     font-size: 30px;
 }
 
 .profile ul{
+    /* Put ul in flex box */
     padding: 1vw;
     
     display: flex;
@@ -227,10 +239,12 @@ main a:hover, main a:active{
     flex-wrap: wrap;
     gap: 3vw;
 
-
+    /* List icons to UTF-8 watermelon icon  */
     list-style-type: "\1F349";
+    list-style-position: inside;
 }
 
+/* Style list elements */
 .profile ul li{
     color: papayawhip;
     background-color: green;
@@ -243,11 +257,13 @@ main a:hover, main a:active{
     color: papayawhip;
 }
 
+/* Show user interactivity by changing link colors when hover/active */
 .profile a:hover, main a:active{
     color: black;
 }
 
 /************* CSS for aside id=styles area ****************/
+/* Make #styles grid area asideStyles, adjust positioning, align text and style. */
 #styles{
     grid-area: asideStyles;
 
@@ -262,7 +278,7 @@ main a:hover, main a:active{
     border-width: 5px;
     border-radius: 5vw;
 }
-
+/* Put ul in flexbox */
 #styles ul{
     padding: 1vw;
 
@@ -272,10 +288,11 @@ main a:hover, main a:active{
     align-items: center;
     flex-wrap: wrap;
     gap: 3vw;
-
+    /* List icons to UTF-8 watermelon icon  */
     list-style-type: "\1F349";
+    list-style-position: inside;
 }
-
+/* Style list elements */
 #styles ul li{
     color: papayawhip;
     background-color: green;
@@ -287,12 +304,13 @@ main a:hover, main a:active{
 #styles a{
     color: papayawhip;
 }
-
+/* Show user interactivity by changing link colors when hover/active */
 #styles a:hover, main a:active{
     color: black;
 }
 
 /*************** CSS for footer area ********************/
+/* Make footer grid area footer, adjust positioning, align text and style */
 footer{
     grid-area: footer;
 
@@ -307,7 +325,7 @@ footer{
     border-width: 5px;
     border-radius: 5vw;
 }
-
+/* Put ul in flexbox */
 footer ul{
     padding: 1vw;
     
@@ -318,10 +336,11 @@ footer ul{
     flex-wrap: wrap;
     gap: 5vw;
 
-
+    /* List icons to UTF-8 watermelon icon  */
     list-style-type: "\1F349";
+    list-style-position: inside;
 }
-
+/* Style list elements */
 footer ul li{
     color: papayawhip;
     background-color: green;
@@ -335,12 +354,13 @@ footer a{
     background-color: green;
     padding:0.2vw;
 }
-
+/* Show user interactivity by changing link colors when hover/active */
 footer a:hover, main a:active{
     color: black;
 }
 
 /******* CSS for skip to main content  **********/
+/* Make .skip-link grid area skipLink, adjust positioning, align text */
 .skip-link{
     grid-area: skipLink;
 
@@ -354,7 +374,7 @@ footer a:hover, main a:active{
     
     text-align: center;
 }
-
+/* Show user interactivity by changing link colors when hover/active */
 .skip-link:hover, .skip-link:active{
     color: black;
 }
@@ -386,12 +406,8 @@ svg {
     "footer"
     "skipLink";
     }
-    /* Adjust position of skip-link */
-    .skip-link{
-        margin-left: 0vw;
-    }
 
-    /* Adjust gap and wrap in flexboxes */
+    /* Adjust gap in flexboxes */
     nav ul{
         gap: 7vw;
     }
@@ -404,14 +420,18 @@ svg {
     footer ul{
         gap: 7vw;
     }
-    /* Adjust size of border box inside main */
-    main section ul{
-        list-style-type: none;
-    }
 
 }
-  /************ References and Referenced Work ****************/
-  /* https://stylestage.dev/styles/css/main-stage.css */
+
+/*************** Image used for background of page ********************/
   /* https://www.vecteezy.com/vector-art/957764-seamless-watermelon-pattern */
+
+/*************** References Used ****************/
+  /* https://stylestage.dev/styles/css/main-stage.css */
   /* https://www.utf8icons.com/character/127817/watermelon */
+
+/*************** References for Adapted Work  ***************/
   /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  /* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries */
+  /* https://www.w3schools.com/CSS/css_list.asp */
